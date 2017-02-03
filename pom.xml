@@ -10,6 +10,10 @@
 <name>Maven Quick Start Archetype</name>
 <url>http://maven.apache.org</url>
 
+    <properties>
+        <junit.version>4.11</junit.version>
+    </properties>
+
 <dependencies>
     <dependency>
     <groupId>junit</groupId>
@@ -17,6 +21,12 @@
     <version>4.8.2</version>
     <scope>test</scope>
 </dependency>
+    <dependency>
+        <groupId>custom.oracle</groupId>
+        <artifactId>wlthint3client</artifactId>
+        <version>1.0</version>
+        <scope>provided</scope>
+    </dependency>
 
     <dependency>
     <groupId>org.apache.activemq</groupId>
@@ -31,7 +41,12 @@
 
     </exclusions>
     </dependency>
-
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+    </dependency>
 </dependencies>
 
 </project>
